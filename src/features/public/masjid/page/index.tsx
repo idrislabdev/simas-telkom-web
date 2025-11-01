@@ -226,7 +226,7 @@ const MasjidPage = () => {
       </div>
 
       {/* --- GRID DATA --- */}
-      <div className="py-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-3 s-1440:grid-cols-4 s-1600:grid-cols-4 gap-4 overflow-y-auto content-start custom-scrollbar w-full">
+      <div className="py-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-3 s-1440:grid-cols-4 s-1600:grid-cols-4 gap-6 overflow-y-auto content-start custom-scrollbar w-full">
         {filteredData.length > 0 ? (
           filteredData.map((mosque) => (
             <MasjidInfoCard item={mosque} key={mosque.id} />
