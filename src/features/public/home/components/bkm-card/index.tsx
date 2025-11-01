@@ -1,4 +1,4 @@
-import { bkmData } from "@/features/public/home/components/bkmData";
+import { bkmData } from "@/mocks/bkmData";
 
 interface HomeBKMCardProps {
   /** URL gambar header (misal: "/images/icon-masjid.png") */

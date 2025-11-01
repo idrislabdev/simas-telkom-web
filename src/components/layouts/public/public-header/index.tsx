@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const PublicHeader = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -37,8 +38,9 @@ const PublicHeader = () => {
               Beranda
             </li>
             <li className="text-neutral-600 hover:text-red-600">
-              Data Masjid / Mushalla
+              <NavLink to={`/masjid`}>Masjid</NavLink>
             </li>
+            <li className="text-neutral-600 hover:text-red-600">Mushalla</li>
             <li className="text-neutral-600 hover:text-red-600">
               Info Terkini
             </li>

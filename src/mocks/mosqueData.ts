@@ -1,0 +1,173 @@
+// src/data/mosqueData.ts
+
+export interface MosqueInfo {
+  id: string;
+  name: string;
+  location: string; // STO / Witel / SBU
+  address: string;
+  completeness: number; // Persentase kelengkapan data
+  image: string;
+}
+
+export const mosqueData: MosqueInfo[] = [
+  {
+    id: "1",
+    name: "Masjid Takkhobar",
+    location: "SBU Ketintang",
+    address: "Jl. Ketintang Baru No. 20, Surabaya, Jawa Timur",
+    completeness: 90,
+    image: "/images/mosque-1.jpg",
+  },
+  {
+    id: "2",
+    name: "Masjid Al-Ikhlas",
+    location: "Witel Malang",
+    address: "Jl. A. Yani No. 2, Blimbing, Malang, Jawa Timur",
+    completeness: 75,
+    image: "/images/mosque-3.jpg",
+  },
+  {
+    id: "3",
+    name: "Masjid Baiturrahman",
+    location: "STO Banyuwangi",
+    address: "Jl. Ahmad Yani No. 85, Banyuwangi, Jawa Timur",
+    completeness: 100,
+    image: "/images/mosque-4.jpg",
+  },
+  {
+    id: "4",
+    name: "Masjid Al-Muttaqin",
+    location: "SBU Sidoarjo",
+    address: "Jl. Raya Jati No. 5, Sidoarjo, Jawa Timur",
+    completeness: 65,
+    image: "/images/mosque-2.jpg",
+  },
+  {
+    id: "5",
+    name: "Masjid Nurul Huda",
+    location: "Witel Kediri",
+    address: "Jl. Basuki Rahmat No. 88, Kediri, Jawa Timur",
+    completeness: 82,
+    image: "/images/mosque-1.jpg",
+  },
+  {
+    id: "6",
+    name: "Masjid Al-Falah",
+    location: "Witel Madiun",
+    address: "Jl. Pahlawan No. 20, Madiun, Jawa Timur",
+    completeness: 88,
+    image: "/images/mosque-3.jpg",
+  },
+  {
+    id: "7",
+    name: "Masjid At-Taqwa",
+    location: "STO Blitar",
+    address: "Jl. Mawar No. 10, Kepanjenkidul, Blitar, Jawa Timur",
+    completeness: 70,
+    image: "/images/mosque-2.jpg",
+  },
+  {
+    id: "8",
+    name: "Masjid Darussalam",
+    location: "SBU Mojokerto",
+    address: "Jl. Bhayangkara No. 56, Mojokerto, Jawa Timur",
+    completeness: 92,
+    image: "/images/mosque-4.jpg",
+  },
+  {
+    id: "9",
+    name: "Masjid Al-Hidayah",
+    location: "Witel Jember",
+    address: "Jl. Gajah Mada No. 33, Jember, Jawa Timur",
+    completeness: 77,
+    image: "/images/mosque-1.jpg",
+  },
+  {
+    id: "10",
+    name: "Masjid Al-Amin",
+    location: "STO Pasuruan",
+    address: "Jl. Sultan Agung No. 45, Pasuruan, Jawa Timur",
+    completeness: 85,
+    image: "/images/mosque-4.jpg",
+  },
+  {
+    id: "11",
+    name: "Masjid Al-Hikmah",
+    location: "Witel Denpasar",
+    address: "Jl. Teuku Umar No. 20, Denpasar, Bali",
+    completeness: 95,
+    image: "/images/mosque-2.jpg",
+  },
+  {
+    id: "12",
+    name: "Masjid Baitul Muttaqin",
+    location: "STO Singaraja",
+    address: "Jl. Ngurah Rai No. 10, Singaraja, Bali",
+    completeness: 78,
+    image: "/images/mosque-1.jpg",
+  },
+  {
+    id: "13",
+    name: "Masjid Al-Furqon",
+    location: "Witel Mataram",
+    address: "Jl. Pejanggik No. 25, Mataram, Nusa Tenggara Barat",
+    completeness: 89,
+    image: "/images/mosque-3.jpg",
+  },
+  {
+    id: "14",
+    name: "Masjid Nurul Iman",
+    location: "STO Sumbawa Besar",
+    address: "Jl. Garuda No. 15, Sumbawa Besar, NTB",
+    completeness: 72,
+    image: "/images/mosque-4.jpg",
+  },
+  {
+    id: "15",
+    name: "Masjid Al-Mujahidin",
+    location: "Witel Kupang",
+    address: "Jl. Cak Doko No. 12, Kupang, Nusa Tenggara Timur",
+    completeness: 80,
+    image: "/images/mosque-2.jpg",
+  },
+  {
+    id: "16",
+    name: "Masjid Al-Ikhwan",
+    location: "STO Maumere",
+    address: "Jl. Ahmad Yani No. 6, Maumere, Nusa Tenggara Timur",
+    completeness: 67,
+    image: "/images/mosque-1.jpg",
+  },
+  {
+    id: "17",
+    name: "Masjid An-Nur",
+    location: "STO Lombok Timur",
+    address: "Jl. Selong Raya No. 9, Lombok Timur, NTB",
+    completeness: 74,
+    image: "/images/mosque-3.jpg",
+  },
+  {
+    id: "18",
+    name: "Masjid Al-Kautsar",
+    location: "Witel Banyuwangi Selatan",
+    address: "Jl. Rogojampi No. 18, Banyuwangi Selatan, Jawa Timur",
+    completeness: 83,
+    image: "/images/mosque-4.jpg",
+  },
+  {
+    id: "19",
+    name: "Masjid Al-Barokah",
+    location: "Witel Probolinggo",
+    address: "Jl. Panglima Sudirman No. 40, Probolinggo, Jawa Timur",
+    completeness: 79,
+    image: "/images/mosque-2.jpg",
+  },
+  {
+    id: "20",
+    name: "Masjid Baitul Makmur",
+    location: "STO Situbondo",
+    address: "Jl. Argopuro No. 7, Situbondo, Jawa Timur",
+    completeness: 81,
+    image: "/images/mosque-1.jpg",
+  },
+];

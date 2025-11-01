@@ -1,5 +1,5 @@
 import { Progress } from "@/components/ui/progress";
-import { mosqueData } from "@/features/public/home/components/mosqueData";
+import { mosqueData } from "@/mocks/mosqueData";
 
 interface HomeInfoCardProps {
   /** URL gambar header (misal: "/images/icon-masjid.png") */
@@ -50,7 +50,7 @@ export const HomeInfoCard = ({
               </div>
               <div className="flex flex-col flex-1">
                 <label className="text-sm font-medium text-neutral-700 line-clamp-1">
-                  {mosque.name}
+                  {mosque.name} ({mosque.location})
                 </label>
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center justify-between">
