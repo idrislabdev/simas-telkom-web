@@ -8,7 +8,7 @@ const PublicLayout = () => {
   return (
     <div className="h-full w-full" style={{ height: "var(--app-height)" }}>
       <PublicHeader />
-      <main className="pt-4 bg-gray-100 ">
+      <main className=" bg-gray-100 ">
         <Outlet />
       </main>
     </div>

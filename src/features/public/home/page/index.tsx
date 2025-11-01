@@ -32,7 +32,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center py-20 space-y-5 px-10 max-w-[1536px] mx-auto">
+    <div className="flex flex-col items-center pt-24 space-y-5 px-10 max-w-[1536px] mx-auto">
       <div
         className="w-full h-[325px] relative overflow-hidden rounded-2xl shadow-lg"
         ref={ref}

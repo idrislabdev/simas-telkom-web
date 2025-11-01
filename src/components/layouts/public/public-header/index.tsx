@@ -35,7 +35,7 @@ const PublicHeader = () => {
         >
           <ul className="flex items-center gap-[22px] text-sm cursor-pointer">
             <li className="text-red-600 font-medium hover:text-red-600">
-              Beranda
+              <NavLink to={`/`}>Beranda</NavLink>
             </li>
             <li className="text-neutral-600 hover:text-red-600">
               <NavLink to={`/masjid`}>Masjid</NavLink>
