@@ -81,8 +81,7 @@ const SidebarSearch: React.FC<{
     onFilterChange(updated);
   };
 
-  const handleSearch = async (e?: React.FormEvent) => {
-    e?.preventDefault();
+  const handleSearch = async () => {
     if (!q.trim()) return;
     setLoading(true);
     try {
@@ -104,8 +103,7 @@ const SidebarSearch: React.FC<{
   const currentProv = data[filters.provinsi as keyof typeof data];
 
   return (
-    <form
-      onSubmit={handleSearch}
+    <div
       className="search-sidebar"
       style={{
         position: "absolute",
@@ -119,102 +117,107 @@ const SidebarSearch: React.FC<{
         zIndex: 1000,
       }}
     >
-      <h3 className="text-lg font-semibold mb-3">Filter Data</h3>
+      <h3 className="text-xl font-medium mb-3">Filter Data</h3>
 
-      {/* Provinsi */}
-      <label className="block mb-1 text-xs text-gray-600">Provinsi</label>
-      <Select
-        value={filters.provinsi}
-        onValueChange={(v) => handleFilterChange("provinsi", v)}
-      >
-        <SelectTrigger className="w-full mb-2 rounded">
-          <SelectValue placeholder="Pilih Provinsi" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="Jawa Timur">Jawa Timur</SelectItem>
-          <SelectItem value="Bali">Bali</SelectItem>
-          <SelectItem value="Nusa Tenggara Barat">
-            Nusa Tenggara Barat
-          </SelectItem>
-          <SelectItem value="Nusa Tenggara Timur">
-            Nusa Tenggara Timur
-          </SelectItem>
-        </SelectContent>
-      </Select>
+      <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-1">
+          <label className="block mb-1 text-xs text-gray-600">Provinsi</label>
+          <Select
+            value={filters.provinsi}
+            onValueChange={(v) => handleFilterChange("provinsi", v)}
+          >
+            <SelectTrigger className="w-full rounded">
+              <SelectValue placeholder="Pilih Provinsi" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="Jawa Timur">Jawa Timur</SelectItem>
+              <SelectItem value="Bali">Bali</SelectItem>
+              <SelectItem value="Nusa Tenggara Barat">
+                Nusa Tenggara Barat
+              </SelectItem>
+              <SelectItem value="Nusa Tenggara Timur">
+                Nusa Tenggara Timur
+              </SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="flex flex-col gap-1">
+          <label className="block mb-1 text-xs text-gray-600">
+            Kota / Kabupaten
+          </label>
+          <Select
+            value={filters.kota}
+            onValueChange={(v) => handleFilterChange("kota", v)}
+            disabled={!filters.provinsi}
+          >
+            <SelectTrigger className="w-full rounded">
+              <SelectValue placeholder="Pilih Kota / Kabupaten" />
+            </SelectTrigger>
+            <SelectContent>
+              {currentProv?.kota.map((k) => (
+                <SelectItem key={k} value={k}>
+                  {k}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
 
-      {/* Kota / Kabupaten */}
-      <label className="block mb-1 text-xs text-gray-600">
-        Kota / Kabupaten
-      </label>
-      <Select
-        value={filters.kota}
-        onValueChange={(v) => handleFilterChange("kota", v)}
-        disabled={!filters.provinsi}
-      >
-        <SelectTrigger className="w-full mb-2 rounded">
-          <SelectValue placeholder="Pilih Kota / Kabupaten" />
-        </SelectTrigger>
-        <SelectContent>
-          {currentProv?.kota.map((k) => (
-            <SelectItem key={k} value={k}>
-              {k}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-
-      {/* Witel */}
-      <label className="block mb-1 text-xs text-gray-600">Witel</label>
-      <Select
-        value={filters.witel}
-        onValueChange={(v) => handleFilterChange("witel", v)}
-        disabled={!filters.kota}
-      >
-        <SelectTrigger className="w-full mb-2 rounded">
-          <SelectValue placeholder="Pilih Witel" />
-        </SelectTrigger>
-        <SelectContent>
-          {currentProv?.witel.map((w) => (
-            <SelectItem key={w} value={w}>
-              {w}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-
-      {/* Jenis */}
-      <label className="block mb-1 text-xs text-gray-600">Jenis</label>
-      <Select
-        value={filters.jenis}
-        onValueChange={(v) => handleFilterChange("jenis", v)}
-      >
-        <SelectTrigger className="w-full mb-3 rounded">
-          <SelectValue placeholder="Pilih Jenis" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="Masjid">Masjid</SelectItem>
-          <SelectItem value="Musholla">Musholla</SelectItem>
-        </SelectContent>
-      </Select>
-
-      {/* Search input */}
-      <div className="flex items-center gap-2 mt-4">
-        <input
-          type="text"
-          placeholder="Cari nama / lokasi..."
-          value={q}
-          onChange={(ev) => setQ(ev.target.value)}
-          className="px-3 py-2 border rounded flex-1"
-        />
+        {/* Witel */}
+        <div className="flex flex-col">
+          <label className="block mb-1 text-xs text-gray-600">Witel</label>
+          <Select
+            value={filters.witel}
+            onValueChange={(v) => handleFilterChange("witel", v)}
+            disabled={!filters.kota}
+          >
+            <SelectTrigger className="w-full rounded">
+              <SelectValue placeholder="Pilih Witel" />
+            </SelectTrigger>
+            <SelectContent>
+              {currentProv?.witel.map((w) => (
+                <SelectItem key={w} value={w}>
+                  {w}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="flex flex-col gap-1">
+          <label className="block mb-1 text-xs text-gray-600">Jenis</label>
+          <Select
+            value={filters.jenis}
+            onValueChange={(v) => handleFilterChange("jenis", v)}
+          >
+            <SelectTrigger className="w-full rounded">
+              <SelectValue placeholder="Pilih Jenis" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="Masjid">Masjid</SelectItem>
+              <SelectItem value="Musholla">Musholla</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="flex flex-col gap-1">
+          <label className="block mb-1 text-xs text-gray-600">Cari</label>
+          <input
+            type="text"
+            placeholder="Cari nama / lokasi..."
+            value={q}
+            onChange={(ev) => setQ(ev.target.value)}
+            className="px-3 py-2 border rounded flex-1"
+          />
+        </div>
         <button
-          type="submit"
+          type="button"
+          onClick={handleSearch}
           disabled={loading}
           className="px-3 py-2 bg-green-600 text-white rounded"
         >
           {loading ? "…" : "Cari"}
         </button>
       </div>
-    </form>
+    </div>
   );
 };
 
