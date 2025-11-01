@@ -1,5 +1,6 @@
 import { HomeBKMCard } from "@/features/public/home/components/bkm-card";
 import { HomeInfoCard } from "@/features/public/home/components/info-card";
+import HomeMapCard from "@/features/public/home/components/map-card";
 import { ChevronDown, Search } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
@@ -126,9 +127,7 @@ export default function HomePage() {
       </div>
 
       {/* Placeholder konten bawah */}
-      <div className="bg-white rounded-md h-[400px] w-full flex shadow-sm p-6">
-        Peta persebaran masjid
-      </div>
+      <HomeMapCard />
     </div>
   );
 }

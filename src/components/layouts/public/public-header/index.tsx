@@ -14,14 +14,12 @@ const PublicHeader = () => {
 
   return (
     <header
-      className={`w-full fixed top-0 left-0 right-0 max-w-[1536px] mx-auto z-50 px-10 transition-all duration-300 py-5 ${
+      className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-5 ${
         scrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
       <div
-        className={`h-[50px] flex w-full justify-between items-center ${
-          scrolled ? "bg-white" : "bg-transparent"
-        }`}
+        className={`h-[50px] flex w-full justify-between items-center max-w-[1536px] mx-auto z-50 px-10 `}
       >
         {/* Logo */}
         <div className="flex flex-col justify-center items-center">

@@ -176,3 +176,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* CSS fix untuk leaflet + shadcn/ui dropdown */
+.leaflet-container {
+  z-index: 1;
+}
+
+.search-sidebar {
+  z-index: 1000 !important;
+  position: absolute;
+}
+
+[data-radix-popper-content-wrapper] {
+  z-index: 2000 !important; /* pastikan dropdown muncul di atas */
+}
