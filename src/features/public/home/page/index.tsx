@@ -112,7 +112,7 @@ export default function HomePage() {
       <hr className="w-full border-gray-200" />
       {/* Bagian data */}
       <div className=" max-w-[1536px] mx-auto px-10 w-full pb-20">
-        <div className="bg-white shadow-custom-4 rounded-tl-4xl rounded-br-4xl p-10 relative w-full h-100">
+        <div className="bg-white shadow-custom-5 rounded-2xl p-10 relative w-full h-100">
           <div className="flex items-center justify-between">
             <div className="flex flex-col justify-center gap-2">
               <h2 className="font-semibold text-red-700">
@@ -129,7 +129,7 @@ export default function HomePage() {
               Lihat Semua
             </button>
           </div>
-          <div className="py-2 pr-10 grid grid-cols-4 gap-4 justify-center  content-start custom-scrollbar w-full absolute bottom-[-100px] right-0">
+          <div className="py-2 px-10 grid grid-cols-4 gap-4 justify-center  content-start custom-scrollbar w-full absolute bottom-[-100px] right-0">
             {regional3Data.slice(0, 3).map((item, index: number) => (
               <SummaryCard item={item} key={index} />
             ))}
@@ -139,9 +139,14 @@ export default function HomePage() {
       </div>
       <div className="w-full py-8 flex flex-col gap-4 bg-neutral-100/80 ">
         <div className="flex items-center justify-between  max-w-[1536px] mx-auto px-10 w-full">
-          <h5 className="font-medium text-neutral-700 text-sm ">
-            Cek profil masjid / mushalla / BKM
-          </h5>
+          <div className="flex flex-col">
+            <h5 className="font-medium text-neutral-700 text-sm ">
+              Kelengkapan Fasilitas
+            </h5>
+            <p className="text-xs text-neutral-500">
+              Kelengkapan fasilitas masjid / mushalla (Jatim, Bali, Nusra)
+            </p>
+          </div>
           <div className="flex items-center gap-2">
             <button className="bg-gray-200 border border-gray-400 text-xs text-neutral-700 flex items-center gap-2 py-1.5 px-4 rounded hover:bg-gray-300 transition">
               Provinsi: Jawa Timur
@@ -152,7 +157,7 @@ export default function HomePage() {
               <ChevronDown size={16} />
             </button>
             <button className="bg-gray-200 border border-gray-400 text-xs text-neutral-700 flex items-center gap-2 py-1.5 px-4 rounded hover:bg-gray-300 transition">
-              Masjid
+              Kelengkapan
               <ChevronDown size={16} />
             </button>
             <button className="bg-white border border-gray-400 text-xs text-neutral-700 flex items-center gap-2 py-1.5 px-4 rounded hover:bg-gray-300 transition">
