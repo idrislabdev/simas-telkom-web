@@ -161,7 +161,7 @@ export default function HomePage() {
             </button>
           </div>
         </div>
-        <div className="flex items-center w-full divide-x divide-gray-200 max-w-[1536px] mx-auto px-10 w-full">
+        <div className="flex items-center divide-x divide-gray-200 max-w-[1536px] mx-auto px-10 w-full">
           <div className="w-1/2">
             <HomeInfoCard
               title="Data Masjid TREG 3"

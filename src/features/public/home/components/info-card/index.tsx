@@ -55,10 +55,11 @@ export const HomeInfoCard = ({
               <div className="flex flex-col flex-1 gap-1.5">
                 <div className="flex flex-col">
                   <label className="text-sm font-medium text-neutral-700 line-clamp-1">
-                    {mosque.name}{" "}
-                    <span className="text-xs"> ({mosque.location})</span>
+                    {mosque.name}
                   </label>
-                  <span className="text-xs line-clamp-1">{mosque.address}</span>
+                  <span className="text-xs text-neutral-500 line-clamp-1">
+                    {mosque.location}
+                  </span>
                 </div>
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center justify-between">
