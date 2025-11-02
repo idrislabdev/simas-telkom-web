@@ -34,7 +34,7 @@ const HomeArticleCard = ({ item }: { item: Iarticle }) => {
           <span className="font-medium text-gray-700">{item.author}</span>
           <span>{moment(item.date).fromNow()}</span>
         </div>
-        <h3 className="text-xl font-semibold text-gray-900 line-clamp-2">
+        <h3 className="text-base leading-5 font-semibold text-gray-900 line-clamp-2">
           {item.title}
         </h3>
         <p className="text-xs text-gray-600 line-clamp-3">{item.content}</p>
