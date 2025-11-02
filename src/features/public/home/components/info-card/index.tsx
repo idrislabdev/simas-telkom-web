@@ -1,3 +1,4 @@
+// import { Progress } from "@/components/ui/progress";
 import { Progress } from "@/components/ui/progress";
 import { mosqueData } from "@/mocks/mosqueData";
 
@@ -16,7 +17,7 @@ export const HomeInfoCard = ({
   description = "",
 }: HomeInfoCardProps) => {
   return (
-    <div className="bg-white flex flex-col  p-4 gap-3 h-[400px]">
+    <div className="bg-white flex flex-col  p-4 gap-3 h-[500px]">
       {/* === Header === */}
       <div className="flex items-center gap-2">
         <div className="w-14 h-14 rounded-full flex justify-center items-center  overflow-hidden border border-gray-200">
@@ -37,27 +38,34 @@ export const HomeInfoCard = ({
       <hr className="border-gray-200" />
 
       {/* === Daftar Masjid === */}
-      <div className="flex flex-1 flex-col gap-3 overflow-y-auto custom-scrollbar">
+      <div className="grid grid-cols-2 gap-3 overflow-y-auto custom-scrollbar p-2">
         {mosqueData.map((mosque) => (
-          <div key={mosque.id} className="flex flex-col gap-1.5">
+          <div
+            key={mosque.id}
+            className="flex flex-col gap-1.5 border border-gray-200 rounded p-2"
+          >
             <div className="flex items-center gap-2">
-              <div className="w-12 h-12 flex justify-center items-center rounded border border-gray-200 bg-gray-200">
+              <div className="w-17 h-17 flex justify-center items-center rounded border border-gray-200 bg-gray-200">
                 <img
-                  src="/images/no-image.png"
-                  className="w-8 object-contain"
+                  src={mosque.image}
+                  className="h-full object-cover rounded"
                   alt={mosque.name}
                 />
               </div>
-              <div className="flex flex-col flex-1">
-                <label className="text-sm font-medium text-neutral-700 line-clamp-1">
-                  {mosque.name} ({mosque.location})
-                </label>
+              <div className="flex flex-col flex-1 gap-1.5">
+                <div className="flex flex-col">
+                  <label className="text-sm font-medium text-neutral-700 line-clamp-1">
+                    {mosque.name}{" "}
+                    <span className="text-xs"> ({mosque.location})</span>
+                  </label>
+                  <span className="text-xs line-clamp-1">{mosque.address}</span>
+                </div>
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center justify-between">
-                    <label className="text-xs text-neutral-700">
-                      Kelengkapan
+                    <label className="text-[10px] text-neutral-700">
+                      Fasilitas
                     </label>
-                    <span className="text-xs">{mosque.completeness}%</span>
+                    <span className="text-[10px]">{mosque.completeness}%</span>
                   </div>
                   <Progress value={mosque.completeness} className="h-1" />
                 </div>
