@@ -52,7 +52,7 @@ export const HomeInfoCard = ({
                   alt={mosque.name}
                 />
               </div>
-              <div className="flex flex-col flex-1 gap-1.5">
+              <div className="flex flex-col flex-1 gap-1">
                 <div className="flex flex-col">
                   <label className="text-sm font-medium text-neutral-700 line-clamp-1">
                     {mosque.name}
