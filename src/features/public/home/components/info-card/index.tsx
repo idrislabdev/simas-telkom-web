@@ -16,7 +16,7 @@ export const HomeInfoCard = ({
   description = "",
 }: HomeInfoCardProps) => {
   return (
-    <div className="w-1/3 bg-gray-50 flex flex-col rounded-md p-4 gap-3 h-[400px]">
+    <div className="bg-white flex flex-col  p-4 gap-3 h-[400px]">
       {/* === Header === */}
       <div className="flex items-center gap-2">
         <div className="w-14 h-14 rounded-full flex justify-center items-center  overflow-hidden border border-gray-200">

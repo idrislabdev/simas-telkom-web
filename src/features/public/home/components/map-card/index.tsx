@@ -261,7 +261,7 @@ const HomeMapCard: React.FC = () => {
 
   return (
     <div
-      className="bg-white rounded-md h-[600px] w-full flex shadow-sm p-8"
+      className="bg-white rounded-md h-[600px] w-full flex"
       style={{ position: "relative" }}
     >
       <MapContainer
