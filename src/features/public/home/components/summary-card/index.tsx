@@ -13,7 +13,7 @@ interface WitelData {
 const SummaryCard = (props: { item: WitelData }) => {
   const { item } = props;
   return (
-    <div className="bg-white w-full shadow-custom-4  p-4 flex flex-col gap-4 max-w-sm">
+    <div className="bg-white w-full shadow-custom-4 p-4 flex flex-col gap-4 max-w-sm">
       <div className="flex flex-col">
         <h5 className="text-red-700">Wilayah</h5>
         <p className="text-2xl font-bold text-neutral-900">{item.name}</p>

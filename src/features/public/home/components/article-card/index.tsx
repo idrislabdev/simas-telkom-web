@@ -30,7 +30,7 @@ const HomeArticleCard = ({ item }: { item: Iarticle }) => {
       {/* Bagian deskripsi */}
       <div className="bg-white p-4 flex flex-col gap-2 rounded-2xl">
         {/* Bagian bawah: waktu dan redaksi */}
-        <div className="flex justify-between items-center text-xs text-gray-500 mb-2">
+        <div className="flex justify-between items-center text-[10px] text-gray-500 mb-2">
           <span className="font-medium text-gray-700">{item.author}</span>
           <span>{moment(item.date).fromNow()}</span>
         </div>

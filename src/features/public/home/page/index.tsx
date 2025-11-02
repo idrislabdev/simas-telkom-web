@@ -112,7 +112,7 @@ export default function HomePage() {
       <hr className="w-full border-gray-200" />
       {/* Bagian data */}
       <div className=" max-w-[1536px] mx-auto px-10 w-full pb-20">
-        <div className="bg-white shadow-custom-4 rounded-4xl p-10 relative w-full h-100">
+        <div className="bg-white shadow-custom-4 rounded-tl-4xl rounded-br-4xl p-10 relative w-full h-100">
           <div className="flex items-center justify-between">
             <div className="flex flex-col justify-center gap-2">
               <h2 className="font-semibold text-red-700">
