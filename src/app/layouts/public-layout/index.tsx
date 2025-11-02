@@ -1,3 +1,4 @@
+import { PublicFooter } from "@/components/layouts/public/footer";
 import PublicHeader from "@/components/layouts/public/public-header";
 import useAppHeight from "@/core/hooks/useAppHeight";
 import { Outlet } from "react-router-dom";
@@ -11,6 +12,7 @@ const PublicLayout = () => {
       <main className=" bg-white">
         <Outlet />
       </main>
+      <PublicFooter />
     </div>
   );
 };

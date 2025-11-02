@@ -13,7 +13,7 @@ interface WitelData {
 const SummaryCard = (props: { item: WitelData }) => {
   const { item } = props;
   return (
-    <div className="bg-white w-full shadow-custom-4 rounded-2xl p-4 flex flex-col gap-4 max-w-sm">
+    <div className="bg-white w-full shadow-custom-4  p-4 flex flex-col gap-4 max-w-sm">
       <div className="flex flex-col">
         <h5 className="text-red-700">Wilayah</h5>
         <p className="text-2xl font-bold text-neutral-900">{item.name}</p>
@@ -51,7 +51,7 @@ const SummaryCard = (props: { item: WitelData }) => {
           </li>
         </ul>
       </div>
-      <button className="w-full h-9 text-white bg-neutral-950 hover:bg-neutral-700 rounded-md text-sm cursor-pointer">
+      <button className="w-full h-9 text-white bg-neutral-950 hover:bg-neutral-700  text-sm cursor-pointer">
         Lihat Selengkapnya
       </button>
     </div>
