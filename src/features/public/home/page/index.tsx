@@ -137,9 +137,9 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col p-8 gap-4 bg-neutral-100/80">
-        <div className="flex items-center justify-between max-w-[1536px] px-10 mx-auto w-full">
-          <h5 className="font-medium text-neutral-700 text-sm">
+      <div className="w-full flex flex-col gap-4 bg-neutral-100/80 ">
+        <div className="flex items-center justify-between  max-w-[1536px] mx-auto px-10">
+          <h5 className="font-medium text-neutral-700 text-sm ">
             Cek profil masjid / mushalla / BKM
           </h5>
           <div className="flex items-center gap-2">
@@ -161,8 +161,7 @@ export default function HomePage() {
             </button>
           </div>
         </div>
-
-        <div className="flex items-center max-w-[1536px] mx-auto  px-10  w-full divide-x divide-gray-200">
+        <div className="flex items-center w-full divide-x divide-gray-200 max-w-[1536px] mx-auto px-10">
           <div className="w-1/2">
             <HomeInfoCard
               title="Data Masjid TREG 3"
