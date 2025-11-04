@@ -1,4 +1,5 @@
 import { Progress } from "@/components/ui/progress";
+import { Link } from "react-router-dom";
 
 export interface MosqueInfo {
   id: string;
@@ -11,7 +12,10 @@ export interface MosqueInfo {
 
 const MasjidInfoCard2 = ({ item }: { item: MosqueInfo }) => {
   return (
-    <div className="relative w-full max-w-sm rounded-md p-2 shadow-custom-4">
+    <Link
+      to={`/masjid/id`}
+      className="relative w-full max-w-sm rounded-md p-2 shadow-custom-4"
+    >
       {/* Bagian gambar */}
       <div className="relative">
         <img
@@ -40,7 +44,7 @@ const MasjidInfoCard2 = ({ item }: { item: MosqueInfo }) => {
           <Progress value={item.completeness} className="h-1" />
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
