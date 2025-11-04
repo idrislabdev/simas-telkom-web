@@ -1,6 +1,6 @@
 "use client";
 
-import MasjidInfoCard from "@/features/public/masjid/components/info-card";
+import MasjidInfoCard2 from "@/features/public/masjid/components/info-card-2";
 import { mosqueData } from "@/mocks/mosqueData";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -10,8 +10,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 
 const MasjidPage = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -103,139 +101,157 @@ const MasjidPage = () => {
   });
 
   return (
-    <div className="flex flex-col items-center pt-24 space-y-5 px-10 max-w-[1536px] mx-auto">
-      {/* --- PARALLAX HEADER --- */}
-      <div
-        className="w-full h-[325px] relative overflow-hidden rounded-2xl shadow-lg"
-        ref={ref}
-      >
+    <div className="flex flex-col items-center py-24 space-y-8 ">
+      <div className="max-w-[1536px] mx-auto w-full px-10">
         <div
-          className="absolute inset-0 bg-cover bg-center will-change-transform transition-transform duration-200 ease-out"
-          style={{
-            backgroundImage: "url('/images/mosque-wallpaper.jpg')",
-            width: "100%",
-            height: "700px",
-            top: "-250px",
-            transform: `translateY(${offsetY}px)`,
-          }}
-        ></div>
-
-        <div className="absolute inset-0 bg-black/25 backdrop-blur-[1px]" />
-
-        <div className="relative z-10 w-full h-full flex flex-col justify-center p-10 text-center">
-          <h1 className="text-3xl leading-10 font-medium text-white drop-shadow-md">
-            Data Masjid Telkom Regional 3
-          </h1>
-          <p className="text-white">
-            Telkom Regional 3 (Jawa Timur, Bali, dan Nusa Tenggara)
-          </p>
-        </div>
-      </div>
-
-      {/* --- FILTER SECTION --- */}
-      <div className="w-full bg-white rounded-xl border border-gray-300 p-5 flex flex-wrap items-center justify-between gap-4">
-        <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
-          {/* Provinsi */}
-          <Select
-            value={province}
-            onValueChange={(value) => {
-              setProvince(value);
-              setCity("");
-              setWitel("");
+          className="w-full h-[325px] relative overflow-hidden rounded-2xl shadow-lg "
+          ref={ref}
+        >
+          {/* Gambar parallax */}
+          <div
+            className="absolute inset-0 bg-cover bg-center will-change-transform transition-transform duration-200 ease-out"
+            style={{
+              backgroundImage: "url('/images/bg-masjid.jpg')",
+              width: "100%",
+              height: "750px",
+              top: "-300px",
+              transform: `translateY(${offsetY}px)`,
             }}
-          >
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Provinsi" />
-            </SelectTrigger>
-            <SelectContent>
-              {Object.keys(data).map((prov) => (
-                <SelectItem key={prov} value={prov}>
-                  {prov}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+          ></div>
 
-          {/* Kota */}
-          <Select
-            value={city}
-            onValueChange={(value) => setCity(value)}
-            disabled={!province}
-          >
-            <SelectTrigger className="w-[150px]">
-              <SelectValue placeholder="Kota" />
-            </SelectTrigger>
-            <SelectContent>
-              {cityOptions.map((kota) => (
-                <SelectItem key={kota} value={kota}>
-                  {kota}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/25"></div>
 
-          {/* Witel */}
-          <Select
-            value={witel}
-            onValueChange={(value) => setWitel(value)}
-            disabled={!province}
-          >
-            <SelectTrigger className="w-[150px]">
-              <SelectValue placeholder="Witel" />
-            </SelectTrigger>
-            <SelectContent>
-              {witelOptions.map((w) => (
-                <SelectItem key={w} value={w}>
-                  {w}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-
-          {/* Tipe */}
-          <Select value={type} onValueChange={(value) => setType(value)}>
-            <SelectTrigger className="w-[150px]">
-              <SelectValue placeholder="Tipe" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="masjid">Masjid</SelectItem>
-              <SelectItem value="musholla">Musholla</SelectItem>
-            </SelectContent>
-          </Select>
-
-          {/* Pencarian */}
-          <Input
-            type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Cari nama masjid..."
-            className="w-[200px]"
-          />
-        </div>
-
-        {/* Tombol Reset */}
-        <div className="flex items-center gap-2">
-          <Button
-            variant="secondary"
-            onClick={handleReset}
-            className="text-sm font-medium"
-          >
-            Reset
-          </Button>
+          {/* Konten */}
+          <div className="relative z-10 w-full h-full flex flex-col justify-center items-center gap-10 p-10">
+            <div className="flex flex-col gap-1 justify-center items-center text-center">
+              <h1 className="text-3xl leading-10 font-medium text-white drop-shadow-md">
+                Data Masjid Telkom Regional 3
+              </h1>
+              <p className="text-white">
+                Telkom Regional 3 (Jawa Timur, Bali, dan Nusa Tenggara)
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* --- GRID DATA --- */}
-      <div className="py-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-3 s-1440:grid-cols-4 s-1600:grid-cols-4 gap-6 overflow-y-auto content-start custom-scrollbar w-full">
-        {filteredData.length > 0 ? (
-          filteredData.map((mosque) => (
-            <MasjidInfoCard item={mosque} key={mosque.id} />
-          ))
-        ) : (
-          <p className="text-center text-gray-500 col-span-full py-10">
-            Tidak ada data yang sesuai filter.
-          </p>
-        )}
+      <div className="max-w-[1536px] mx-auto w-full px-10 flex gap-4">
+        {/* Filter data */}
+        <div className="w-72">
+          <div className="flex flex-col gap-3 rounded-md shadow-custom-4 p-4 h-fit sticky top-28 bg-white z-20">
+            <div className="flex flex-col gap-1">
+              <label className="block mb-1 text-xs text-gray-600">
+                Provinsi
+              </label>
+              <Select value={province} onValueChange={setProvince}>
+                <SelectTrigger className="w-full rounded">
+                  <SelectValue placeholder="Pilih Provinsi" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Jawa Timur">Jawa Timur</SelectItem>
+                  <SelectItem value="Bali">Bali</SelectItem>
+                  <SelectItem value="Nusa Tenggara Barat">
+                    Nusa Tenggara Barat
+                  </SelectItem>
+                  <SelectItem value="Nusa Tenggara Timur">
+                    Nusa Tenggara Timur
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <label className="block mb-1 text-xs text-gray-600">
+                Kota / Kabupaten
+              </label>
+              <Select value={city} onValueChange={setCity}>
+                <SelectTrigger className="w-full rounded">
+                  <SelectValue placeholder="Pilih Kota / Kabupaten" />
+                </SelectTrigger>
+                <SelectContent>
+                  {cityOptions.map((item) => (
+                    <SelectItem key={item} value={item}>
+                      {item}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Witel */}
+            <div className="flex flex-col">
+              <label className="block mb-1 text-xs text-gray-600">Witel</label>
+              <Select value={witel} onValueChange={setWitel}>
+                <SelectTrigger className="w-full rounded">
+                  <SelectValue placeholder="Pilih Witel" />
+                </SelectTrigger>
+                <SelectContent>
+                  {witelOptions.map((item) => (
+                    <SelectItem key={item} value={item}>
+                      {item}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <label className="block mb-1 text-xs text-gray-600">
+                Kelengkapan
+              </label>
+              <Select value={type} onValueChange={setType}>
+                <SelectTrigger className="w-full rounded">
+                  <SelectValue placeholder="Pilih Kelengkapan" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Masjid">Masjid</SelectItem>
+                  <SelectItem value="Musholla">Musholla</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <label className="block mb-1 text-xs text-gray-600">Cari</label>
+              <input
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Cari nama / lokasi..."
+                className="px-3 py-1 border rounded flex-1"
+              />
+            </div>
+
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={handleReset}
+                className="px-3 py-1 bg-gray-200 text-gray-700 rounded w-full"
+              >
+                Reset
+              </button>
+              <button
+                type="button"
+                className="px-3 py-1 bg-green-600 text-white rounded w-full"
+              >
+                Cari
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* List Masjid */}
+        <div className="flex-1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4 s-1440:grid-cols-4 s-1600:grid-cols-5 gap-4 content-start custom-scrollbar">
+          {filteredData.length > 0 ? (
+            filteredData.map((mosque) => (
+              <MasjidInfoCard2 item={mosque} key={mosque.id} />
+            ))
+          ) : (
+            <p className="text-center text-gray-500 col-span-full py-10">
+              Tidak ada data yang sesuai filter.
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );
