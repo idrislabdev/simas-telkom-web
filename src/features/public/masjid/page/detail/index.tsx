@@ -1,5 +1,13 @@
 import { facilities } from "@/mocks/facilities";
-import { CheckCircle, CircleX } from "lucide-react";
+import {
+  Building,
+  CheckCircle,
+  CircleX,
+  Image,
+  Map,
+  MapPin,
+  Users,
+} from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 export const MasjidDetailPage = () => {
@@ -28,47 +36,73 @@ export const MasjidDetailPage = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="flex flex-col items-center py-24 space-y-8">
-      <div className="max-w-[1536px] mx-auto w-full px-10 ">
-        <div
-          className="w-full h-[325px] relative overflow-hidden rounded-2xl shadow-lg "
-          ref={ref}
-        >
-          {/* Gambar parallax */}
+    <div className="flex flex-col py-24 space-y-8">
+      <div className="max-w-[1536px] mx-auto w-full px-10">
+        <div className="w-full h-[375px] shadow-custom-1 rounded-md p-2">
           <div
-            className="absolute inset-0 bg-cover bg-center will-change-transform transition-transform duration-200 ease-out"
-            style={{
-              backgroundImage: "url('/images/bg-masjid.jpg')",
-              width: "100%",
-              height: "750px",
-              top: "-300px",
-              transform: `translateY(${offsetY}px)`,
-            }}
-          ></div>
+            className="w-full h-[275px] relative overflow-hidden rounded-tr-md rounded-tl-md shadow-lg "
+            ref={ref}
+          >
+            {/* Gambar parallax */}
+            <div
+              className="absolute inset-0 bg-cover bg-center will-change-transform transition-transform duration-200 ease-out"
+              style={{
+                backgroundImage: "url('/images/bg-masjid.jpg')",
+                width: "100%",
+                height: "750px",
+                top: "-300px",
+                transform: `translateY(${offsetY}px)`,
+              }}
+            ></div>
 
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/25"></div>
-
-          {/* Konten */}
-          <div className="relative z-10 w-full h-full flex flex-col justify-center items-center gap-10 p-10">
-            <div className="flex flex-col gap-1 justify-center items-center text-center">
-              <h1 className="text-5xl leading-10 font-medium text-white drop-shadow-md bg-neutral-950/70 px-4 py-1">
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/25"></div>
+          </div>
+          <div className="w-full h-[100px] flex gap-4 items-start relative">
+            <div className="w-40 relative">
+              <div className="w-[120px] h-[120px] p-2 bg-white absolute -top-10 right-0  rounded">
+                <img src="/images/mosque-1.jpg" />
+              </div>
+            </div>
+            <div className="flex-1 flex flex-col gap-1 pt-2">
+              <h5 className="text-2xl text-neutral-700 font-medium">
                 Masjid Takkhobar
-              </h1>
-              <p className="text-4xl text-white font-medium">(SBU Ketintang)</p>
+              </h5>
+              <div className="flex items-center gap-10 text-neutral-500 text-sm">
+                <p className="flex items-center gap-1">
+                  <Building size={18} /> SBU Ketintang
+                </p>
+                <span className="flex items-center gap-1">
+                  <MapPin size={18} /> Surabaya
+                </span>
+                <span className="flex items-center gap-1">
+                  <Map size={18} /> Jawa Timur
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div className="max-w-[1536px] mx-auto w-full px-10 flex items-center gap-4">
+        <button className="bg-red-500 text-white font-medium text-sm rounded px-3 py-2 flex gap-1 items-center shadow-custom-1 cursor-pointer">
+          <Building size={18} /> Profil Masjid
+        </button>
+        <button className="text-neutral-700 font-medium text-sm rounded px-3 py-2 flex gap-1 items-center cursor-pointer hover:bg-red-500/20 transition-all duration-300 hover:text-blue-500">
+          <Image size={18} /> Galeri / Foto
+        </button>
+        <button className="text-neutral-700 font-medium text-sm rounded px-3 py-2 flex gap-1 items-center cursor-pointer hover:bg-red-500/20 transition-all duration-300 hover:text-blue-500">
+          <Users size={18} /> Informasi BKM
+        </button>
+      </div>
       <div className="max-w-[1536px] mx-auto w-full px-10 ">
-        <div className="flex items-center gap-4 w-full">
+        <div className="flex gap-4 w-full">
           <div className="w-72">
-            <div className="flex flex-col gap-4 rounded-md shadow-custom-4 p-4 h-fit sticky top-28 bg-white z-20">
+            <div className="flex flex-col gap-4 rounded-md shadow-custom-1 p-4 h-fit sticky top-28 bg-white z-20">
               <div className="flex flex-col gap-1 text-neutral-700">
                 <label className="text-sm font-medium text-neutral-800">
                   Profil
                 </label>
-                <hr />
+                <hr className="my-1" />
                 <div className="flex gap-0.5">
                   <label className="w-26 font-medium text-xs">Nama</label>
                   <span className="text-xs w-1">:</span>
@@ -117,7 +151,7 @@ export const MasjidDetailPage = () => {
                 <label className="text-sm font-medium text-neutral-800">
                   Alamat
                 </label>
-                <hr />
+                <hr className="my-1" />
                 <div className="flex gap-0.5">
                   <label className="w-26 font-medium text-xs">Lokasi</label>
                   <span className="text-xs w-1">:</span>
@@ -147,7 +181,7 @@ export const MasjidDetailPage = () => {
                 <label className="text-sm font-medium text-neutral-800">
                   Kontak
                 </label>
-                <hr />
+                <hr className="my-1" />
                 <div className="flex items-center">
                   <label className="w-26 font-medium text-xs">Email</label>
                   <span className="text-xs flex-1">: masji@gmail.com</span>
@@ -162,26 +196,26 @@ export const MasjidDetailPage = () => {
                   Kelengkapan{" "}
                   <span className="text-green-600 text-xs">90%</span>
                 </label>
-                <hr />
-                <ul className="flex flex-col gap-2 text-xs text-neutral-700">
+                <hr className="my-1" />
+                <div className="flex items-center flex-wrap gap-2 text-xs text-neutral-700">
                   {facilities.map((item, index: number) => (
-                    <li className="flex items-center gap-1" key={index}>
+                    <div
+                      className={`flex items-center gap-1 rounded text-white p-1 ${
+                        item.checked ? "bg-blue-500" : "bg-red-500"
+                      }`}
+                      key={index}
+                    >
                       {item.name}
-                      {item.checked && (
-                        <span className="text-blue-600">
-                          <CheckCircle size={14} />
-                        </span>
-                      )}
-                      {!item.checked && (
-                        <span className="text-red-600">
-                          <CircleX size={14} />
-                        </span>
-                      )}
-                    </li>
+                      {item.checked && <CheckCircle size={14} />}
+                      {!item.checked && <CircleX size={14} />}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
+          </div>
+          <div className="flex-1 shadow-custom-2 h-300 rounded flex flex-col justify-center items-center">
+            <p>content</p>
           </div>
         </div>
       </div>
