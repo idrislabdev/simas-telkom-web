@@ -22,7 +22,7 @@
     rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
     rgba(0, 0, 0, 0.07) 0px 32px 64px;
   --shadow-custom-5: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-  --shadow-custom-6: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --shadow-custom-6: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --breakpoint-s-1440: 90rem;
   --breakpoint-s-1600: 100rem;
   --breakpoint-s-1700: 106.25rem;

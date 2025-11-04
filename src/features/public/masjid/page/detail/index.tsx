@@ -36,9 +36,9 @@ export const MasjidDetailPage = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="flex flex-col py-24 space-y-8">
+    <div className="flex flex-col py-24 space-y-6">
       <div className="max-w-[1536px] mx-auto w-full px-10">
-        <div className="w-full h-[375px] shadow-custom-1 rounded-md p-2">
+        <div className="w-full h-[375px] shadow-custom-6 rounded-md p-2">
           <div
             className="w-full h-[275px] relative overflow-hidden rounded-tr-md rounded-tl-md shadow-lg "
             ref={ref}
@@ -84,7 +84,7 @@ export const MasjidDetailPage = () => {
         </div>
       </div>
       <div className="max-w-[1536px] mx-auto w-full px-10 flex items-center gap-4">
-        <button className="bg-red-500 text-white font-medium text-sm rounded px-3 py-2 flex gap-1 items-center shadow-custom-1 cursor-pointer">
+        <button className="bg-red-500 text-white font-medium text-sm rounded px-3 py-2 flex gap-1 items-center shadow-custom-6 cursor-pointer">
           <Building size={18} /> Profil Masjid
         </button>
         <button className="text-neutral-700 font-medium text-sm rounded px-3 py-2 flex gap-1 items-center cursor-pointer hover:bg-red-500/20 transition-all duration-300 hover:text-blue-500">
@@ -97,7 +97,7 @@ export const MasjidDetailPage = () => {
       <div className="max-w-[1536px] mx-auto w-full px-10 ">
         <div className="flex gap-4 w-full">
           <div className="w-72">
-            <div className="flex flex-col gap-4 rounded-md shadow-custom-1 p-4 h-fit sticky top-28 bg-white z-20">
+            <div className="flex flex-col gap-4 rounded-md shadow-custom-6 p-4 h-fit sticky top-28 bg-white z-20">
               <div className="flex flex-col gap-1 text-neutral-700">
                 <label className="text-sm font-medium text-neutral-800">
                   Profil
@@ -214,8 +214,10 @@ export const MasjidDetailPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1 shadow-custom-2 h-300 rounded flex flex-col justify-center items-center">
-            <p>content</p>
+          <div className="flex-1 shadow-custom-6 h-300 rounded flex flex-col justify-center items-center p-4">
+            <div className=" flex flex-col justify-center items-center border border-gray-200 w-full h-full rounded">
+              <p>content</p>
+            </div>
           </div>
         </div>
       </div>
