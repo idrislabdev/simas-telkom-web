@@ -1,3 +1,4 @@
+import { MasjidDetailProfile } from "@/features/public/masjid/components/detail/gallery";
 import { facilities } from "@/mocks/facilities";
 import {
   Building,
@@ -215,8 +216,8 @@ export const MasjidDetailPage = () => {
             </div>
           </div>
           <div className="flex-1 shadow-custom-6 h-300 rounded flex flex-col justify-center items-center p-4">
-            <div className=" flex flex-col justify-center items-center border border-gray-200 w-full h-full rounded">
-              <p>content</p>
+            <div className=" flex flex-col border border-gray-200 w-full h-full rounded p-4">
+              <MasjidDetailProfile />
             </div>
           </div>
         </div>
