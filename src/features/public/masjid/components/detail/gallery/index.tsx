@@ -59,7 +59,9 @@ export const MasjidDetailProfile = () => {
           </p>
         </div>
         <div className="flex flex-col gap-2">
-          <h5 className="text-sm text-neutral-700 font-medium">Fasilitas :</h5>
+          <h5 className="text-sm text-neutral-700 font-medium">
+            Fasilitas <span className="text-green-700">90%</span> :
+          </h5>
           <div className="flex flex-col gap-2">
             {facilities
               .filter((x) => x.checked)

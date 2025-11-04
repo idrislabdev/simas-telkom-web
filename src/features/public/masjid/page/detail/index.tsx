@@ -191,7 +191,8 @@ export const MasjidDetailPage = () => {
               </div>
               <div className="flex flex-col gap-2 text-neutral-700">
                 <label className="text-xs text-neutral-400 uppercase">
-                  Kelengkapan
+                  Fasilitas{" "}
+                  <span className="text-green-700 font-medium">90%</span>
                 </label>
                 <div className="flex items-center flex-wrap gap-2 text-xs text-neutral-700">
                   {facilities.map((item, index: number) => (
