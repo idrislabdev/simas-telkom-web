@@ -1,3 +1,5 @@
+import FacilityAccordion from "@/features/public/masjid/components/facility-accordion";
+import { facilities } from "@/mocks/facilities";
 import { MapPin } from "lucide-react";
 
 export const MasjidDetailProfile = () => {
@@ -31,7 +33,7 @@ export const MasjidDetailProfile = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
           <h2 className="text-4xl font-medium text-neutral-800">
             Masjid Takkhobar
@@ -41,7 +43,9 @@ export const MasjidDetailProfile = () => {
           </div>
         </div>
         <div className="flex flex-col gap-1">
-          <h5 className="text-sm text-neutral-700 font-medium">Deskripsi :</h5>
+          <h5 className="text-sm text-neutral-700 font-medium">
+            Sejarah Masjid :
+          </h5>
           <p className="text-xs text-justify text-neutral-700">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -53,6 +57,16 @@ export const MasjidDetailProfile = () => {
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
+        </div>
+        <div className="flex flex-col gap-2">
+          <h5 className="text-sm text-neutral-700 font-medium">Fasilitas :</h5>
+          <div className="flex flex-col gap-2">
+            {facilities
+              .filter((x) => x.checked)
+              .map((item, index: number) => (
+                <FacilityAccordion item={item} key={index} />
+              ))}
+          </div>
         </div>
       </div>
     </div>

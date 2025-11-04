@@ -69,7 +69,7 @@ export const MasjidDetailPage = () => {
               <h5 className="text-2xl text-neutral-700 font-medium">
                 Masjid Takkhobar
               </h5>
-              <div className="flex items-center gap-10 text-neutral-500 text-sm">
+              <div className="flex items-center gap-8 text-neutral-500 text-sm">
                 <p className="flex items-center gap-1">
                   <Building size={18} /> SBU Ketintang
                 </p>
@@ -98,40 +98,39 @@ export const MasjidDetailPage = () => {
       <div className="max-w-[1536px] mx-auto w-full px-10 ">
         <div className="flex gap-4 w-full">
           <div className="w-72">
-            <div className="flex flex-col gap-4 rounded-md shadow-custom-6 p-4 h-fit sticky top-28 bg-white z-20">
-              <div className="flex flex-col gap-1 text-neutral-700">
-                <label className="text-sm font-medium text-neutral-800">
+            <div className="flex flex-col gap-3 rounded-md shadow-custom-6 p-4 h-fit sticky top-28 bg-white z-20">
+              <div className="flex flex-col gap-2 text-neutral-700">
+                <label className="text-xs text-neutral-400 uppercase">
                   Profil
                 </label>
-                <hr className="my-1" />
-                <div className="flex gap-0.5">
+                <div className="flex gap-0.5 text-neutral-700">
                   <label className="w-26 font-medium text-xs">Nama</label>
                   <span className="text-xs w-1">:</span>
                   <span className="text-xs flex-1"> Masjid Takkhobar</span>
                 </div>
-                <div className="flex gap-0.5">
+                <div className="flex gap-0.5 text-neutral-700">
                   <label className="w-26 font-medium text-xs">Tipe</label>
                   <span className="text-xs w-1">:</span>
                   <span className="text-xs flex-1"> Masjid</span>
                 </div>
-                <div className="flex gap-0.5">
+                <div className="flex gap-0.5 text-neutral-700">
                   <label className="w-26 font-medium text-xs">Didirikan</label>
                   <span className="text-xs w-1">:</span>
                   <span className="text-xs flex-1"> Tahun 2004</span>
                 </div>
-                <div className="flex gap-0.5">
+                <div className="flex gap-0.5 text-neutral-700">
                   <label className="w-26 font-medium text-xs">Jumlah BKM</label>
                   <span className="text-xs w-1">:</span>
                   <span className="text-xs flex-1"> 10 Orang</span>
                 </div>
-                <div className="flex gap-0.5">
+                <div className="flex gap-0.5 text-neutral-700">
                   <label className="w-26 font-medium text-xs">Luas Tanah</label>
                   <span className="text-xs w-1">:</span>
                   <span className="text-xs flex-1 flex">
                     100 m<span className="text-[10px]">2</span>
                   </span>
                 </div>
-                <div className="flex gap-0.5">
+                <div className="flex gap-0.5 text-neutral-700">
                   <label className="w-26 font-medium text-xs">
                     Luas Bangunan
                   </label>
@@ -140,7 +139,7 @@ export const MasjidDetailPage = () => {
                     100 m<span className="text-[10px]">2</span>
                   </span>
                 </div>
-                <div className="flex gap-0.5">
+                <div className="flex gap-0.5 text-neutral-700">
                   <label className="w-26 font-medium text-xs">
                     Daya Tampung
                   </label>
@@ -148,29 +147,28 @@ export const MasjidDetailPage = () => {
                   <span className="text-xs flex-1 flex">1.000</span>
                 </div>
               </div>
-              <div className="flex flex-col gap-1 text-neutral-700">
-                <label className="text-sm font-medium text-neutral-800">
+              <div className="flex flex-col gap-2 text-neutral-700">
+                <label className="text-xs text-neutral-400 uppercase">
                   Alamat
                 </label>
-                <hr className="my-1" />
-                <div className="flex gap-0.5">
+                <div className="flex gap-0.5 text-neutral-700">
                   <label className="w-26 font-medium text-xs">Lokasi</label>
                   <span className="text-xs w-1">:</span>
                   <span className="text-xs flex-1"> SBU Ketintang</span>
                 </div>
-                <div className="flex gap-0.5">
+                <div className="flex gap-0.5 text-neutral-700">
                   <label className="w-26 font-medium text-xs">
                     Kab. / Kota
                   </label>
                   <span className="text-xs w-1">:</span>
                   <span className="text-xs flex-1"> Surabaya</span>
                 </div>
-                <div className="flex gap-0.5">
+                <div className="flex gap-0.5 text-neutral-700">
                   <label className="w-26 font-medium text-xs">Provinsi</label>
                   <span className="text-xs w-1">:</span>
                   <span className="text-xs flex-1"> Jawa Timur</span>
                 </div>
-                <div className="flex gap-0.5">
+                <div className="flex gap-0.5 text-neutral-700">
                   <label className="w-26 font-medium text-xs">Alamat</label>
                   <span className="text-xs w-1">:</span>
                   <span className="text-xs flex-1">
@@ -178,11 +176,10 @@ export const MasjidDetailPage = () => {
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col gap-1 text-neutral-700">
-                <label className="text-sm font-medium text-neutral-800">
+              <div className="flex flex-col gap-2 text-neutral-700">
+                <label className="text-xs text-neutral-400 uppercase">
                   Kontak
                 </label>
-                <hr className="my-1" />
                 <div className="flex items-center">
                   <label className="w-26 font-medium text-xs">Email</label>
                   <span className="text-xs flex-1">: masji@gmail.com</span>
@@ -192,12 +189,10 @@ export const MasjidDetailPage = () => {
                   <span className="text-xs flex-1">: +628181018171</span>
                 </div>
               </div>
-              <div className="flex flex-col gap-1 text-neutral-700">
-                <label className="gap-1 text-sm font-medium text-neutral-800">
-                  Kelengkapan{" "}
-                  <span className="text-green-600 text-xs">90%</span>
+              <div className="flex flex-col gap-2 text-neutral-700">
+                <label className="text-xs text-neutral-400 uppercase">
+                  Kelengkapan
                 </label>
-                <hr className="my-1" />
                 <div className="flex items-center flex-wrap gap-2 text-xs text-neutral-700">
                   {facilities.map((item, index: number) => (
                     <div
@@ -215,7 +210,7 @@ export const MasjidDetailPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1 shadow-custom-6 h-300 rounded flex flex-col justify-center items-center p-4">
+          <div className="flex-1 shadow-custom-6 rounded-md flex flex-col justify-center items-center p-4">
             <div className=" flex flex-col border border-gray-200 w-full h-full rounded p-4">
               <MasjidDetailProfile />
             </div>
