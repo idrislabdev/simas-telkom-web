@@ -3,10 +3,10 @@ import { useRef, useEffect, useState } from "react";
 import { regional3Data } from "@/mocks/regional3Data";
 import SummaryCardBlack from "@/features/public/home/components/summary-card-black";
 import { ChevronDown, Search } from "lucide-react";
-import { HomeInfoCard } from "@/features/public/home/components/info-card";
 import HomeMapCard from "@/features/public/home/components/map-card";
-import HomeArticleCard from "@/features/public/home/components/article-card";
+import ArticleCard from "@/components/ui/article-card";
 import { articleData } from "@/mocks/articleData";
+import { HomeInfoCard } from "@/features/public/home/components/info-card";
 
 export default function HomePage() {
   const ref = useRef<HTMLDivElement>(null);
@@ -197,7 +197,7 @@ export default function HomePage() {
           </div>
           <div className="py-2 px-10 grid grid-cols-4 gap-4 justify-center  content-start custom-scrollbar w-full bottom-[-100px] right-0">
             {articleData.slice(0, 4).map((article) => (
-              <HomeArticleCard item={article} key={article.id} />
+              <ArticleCard item={article} key={article.id} />
             ))}
           </div>
         </div>

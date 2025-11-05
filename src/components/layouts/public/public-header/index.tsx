@@ -42,7 +42,7 @@ const PublicHeader = () => {
             </li>
             <li className="text-neutral-600 hover:text-red-600">Mushalla</li>
             <li className="text-neutral-600 hover:text-red-600">
-              Info Terkini
+              <NavLink to={`/info`}>Info Terkini</NavLink>
             </li>
             <li className="text-neutral-600 hover:text-red-600">Unduh Data</li>
             <li className="text-neutral-600 hover:text-red-600">Kontak Kami</li>

@@ -44,4 +44,76 @@ export const articleData: Article[] = [
     author: "Kontributor Lapangan",
     date: "2025-07-11",
   },
+  {
+    id: "5",
+    title: "Gotong Royong Warga dalam Pembangunan Musholla Baru",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra ex sit amet diam posuere, non tempus velit convallis. Vestibulum laoreet finibus sem, non posuere mi gravida sed. Aenean nec lectus eget neque finibus mattis. Pellentesque ac cursus urna.",
+    image: "/images/mosque-3.jpg",
+    author: "Tim Dokumentasi",
+    date: "2025-08-03",
+  },
+  {
+    id: "6",
+    title: "Kegiatan Sosial Bersama BKM di Bulan Ramadhan",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a ante ut lectus imperdiet imperdiet. Fusce id risus et nunc porta tristique. Praesent mattis eros vel fermentum eleifend. In at viverra eros, at dictum nisi. Suspendisse faucibus, sem sit amet malesuada vulputate.",
+    image: "/images/mosque-4.jpg",
+    author: "Kontributor Lapangan",
+    date: "2025-07-11",
+  },
+  {
+    id: "7",
+    title: "Gotong Royong Warga dalam Pembangunan Musholla Baru",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra ex sit amet diam posuere, non tempus velit convallis. Vestibulum laoreet finibus sem, non posuere mi gravida sed. Aenean nec lectus eget neque finibus mattis. Pellentesque ac cursus urna.",
+    image: "/images/mosque-3.jpg",
+    author: "Tim Dokumentasi",
+    date: "2025-08-03",
+  },
+  {
+    id: "8",
+    title: "Kegiatan Sosial Bersama BKM di Bulan Ramadhan",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a ante ut lectus imperdiet imperdiet. Fusce id risus et nunc porta tristique. Praesent mattis eros vel fermentum eleifend. In at viverra eros, at dictum nisi. Suspendisse faucibus, sem sit amet malesuada vulputate.",
+    image: "/images/mosque-4.jpg",
+    author: "Kontributor Lapangan",
+    date: "2025-07-11",
+  },
+  {
+    id: "9",
+    title: "Kegiatan Sosial Bersama BKM di Bulan Ramadhan",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a ante ut lectus imperdiet imperdiet. Fusce id risus et nunc porta tristique. Praesent mattis eros vel fermentum eleifend. In at viverra eros, at dictum nisi. Suspendisse faucibus, sem sit amet malesuada vulputate.",
+    image: "/images/mosque-4.jpg",
+    author: "Kontributor Lapangan",
+    date: "2025-07-11",
+  },
+  {
+    id: "10",
+    title: "Gotong Royong Warga dalam Pembangunan Musholla Baru",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra ex sit amet diam posuere, non tempus velit convallis. Vestibulum laoreet finibus sem, non posuere mi gravida sed. Aenean nec lectus eget neque finibus mattis. Pellentesque ac cursus urna.",
+    image: "/images/mosque-3.jpg",
+    author: "Tim Dokumentasi",
+    date: "2025-08-03",
+  },
+  {
+    id: "11",
+    title: "Kegiatan Sosial Bersama BKM di Bulan Ramadhan",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a ante ut lectus imperdiet imperdiet. Fusce id risus et nunc porta tristique. Praesent mattis eros vel fermentum eleifend. In at viverra eros, at dictum nisi. Suspendisse faucibus, sem sit amet malesuada vulputate.",
+    image: "/images/mosque-4.jpg",
+    author: "Kontributor Lapangan",
+    date: "2025-07-11",
+  },
+  {
+    id: "12",
+    title: "Gotong Royong Warga dalam Pembangunan Musholla Baru",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra ex sit amet diam posuere, non tempus velit convallis. Vestibulum laoreet finibus sem, non posuere mi gravida sed. Aenean nec lectus eget neque finibus mattis. Pellentesque ac cursus urna.",
+    image: "/images/mosque-3.jpg",
+    author: "Tim Dokumentasi",
+    date: "2025-08-03",
+  },
 ];
