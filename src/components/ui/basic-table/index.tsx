@@ -47,14 +47,14 @@ export function BasicTable<T>({
                   key={String(col.key)}
                   className={`text-${
                     col.align ?? "left"
-                  } font-medium text-xs py-2 px-3 whitespace-nowrap bg-gray-50`}
+                  } font-medium text-[11px] py-2 px-3 whitespace-nowrap bg-gray-50`}
                   style={{ width: col.width }}
                 >
                   {col.label}
                 </th>
               ))}
               {actions && (
-                <th className="text-center font-medium text-xs py-2 px-3 w-24 whitespace-nowrap bg-gray-50">
+                <th className="text-center font-medium text-[11px] py-2 px-3 w-24 whitespace-nowrap bg-gray-50">
                   Aksi
                 </th>
               )}
@@ -95,7 +95,7 @@ export function BasicTable<T>({
                   {columns.map((col) => (
                     <td
                       key={String(col.key)}
-                      className={`py-1.5 px-3 text-xs text-${
+                      className={`py-1.5 px-3 text-[11px] text-${
                         col.align ?? "left"
                       } whitespace-nowrap`}
                     >
@@ -105,7 +105,7 @@ export function BasicTable<T>({
                     </td>
                   ))}
                   {actions && (
-                    <td className="py-1.5 px-3 text-center text-xs whitespace-nowrap">
+                    <td className="py-1.5 px-3 text-center text-[11px] whitespace-nowrap">
                       {actions(row)}
                     </td>
                   )}
