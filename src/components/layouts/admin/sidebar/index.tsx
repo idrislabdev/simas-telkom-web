@@ -45,7 +45,7 @@ const AdminSidebar = () => {
         },
         {
           icon: <MailCheck size={17} />,
-          label: "Manajemen Inbox",
+          label: "Kotak Masuk",
           path: "/admin/inbox",
         },
         {

@@ -18,8 +18,8 @@ export const regional3Data: WitelData[] = [
     totalMusholla: 7,
     totalBKM: 6,
     completeness: {
-      mosque: "6/8",
-      musholla: "5/7",
+      mosque: "8/6",
+      musholla: "8/5",
     },
   },
   {
@@ -28,8 +28,8 @@ export const regional3Data: WitelData[] = [
     totalMusholla: 4,
     totalBKM: 3,
     completeness: {
-      mosque: "2/3",
-      musholla: "3/4",
+      mosque: "3/2",
+      musholla: "4/3",
     },
   },
   {
@@ -38,8 +38,8 @@ export const regional3Data: WitelData[] = [
     totalMusholla: 6,
     totalBKM: 5,
     completeness: {
-      mosque: "2/4",
-      musholla: "4/6",
+      mosque: "4/2",
+      musholla: "6/4",
     },
   },
   {
@@ -48,8 +48,8 @@ export const regional3Data: WitelData[] = [
     totalMusholla: 17,
     totalBKM: 14,
     completeness: {
-      mosque: "10/15",
-      musholla: "12/17",
+      mosque: "15/10",
+      musholla: "17/12",
     },
   },
 ];

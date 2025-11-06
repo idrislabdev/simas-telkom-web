@@ -26,7 +26,7 @@ const AdminLayout = () => {
             <UserInfo />
           </div>
         </div>
-        <div className="h-full">
+        <div className="h-full overflow-y-auto">
           <Outlet />
         </div>
       </main>

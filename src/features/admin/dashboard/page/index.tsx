@@ -1,5 +1,27 @@
+import BuildingColumnCharts from "@/features/admin/dashboard/components/building-column-chart";
+import MosqueDonutChart from "@/features/admin/dashboard/components/mosque-donut-chart";
+import MushollaDonutChart from "@/features/admin/dashboard/components/mushalla-donut-chart";
+import DashboardSummaryCard from "@/features/admin/dashboard/components/summary-cards";
+
 const DashboardPage = () => {
-  return <div>DashboardPage</div>;
+  return (
+    <div className="flex flex-col space-y-4">
+      <DashboardSummaryCard />
+      <div className="flex items-center gap-4 h-[500px]">
+        <div className="w-2/3 shadow-custom-5 rounded-md h-full">
+          <BuildingColumnCharts />
+        </div>
+        <div className="w-1/3 flex flex-col gap-3 h-full">
+          <div className="flex-1 shadow-custom-5 w-full rounded-md">
+            <MosqueDonutChart />
+          </div>
+          <div className="flex-1 shadow-custom-5 w-full rounded-md">
+            <MushollaDonutChart />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default DashboardPage;

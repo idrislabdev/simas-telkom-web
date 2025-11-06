@@ -50,6 +50,14 @@
     background: linear-gradient(135deg, #ff8a80 0%, #ff5252 40%, #d50000 100%);
   }
 
+  .bg-neutral-gradient {
+    background: linear-gradient(
+      90deg,
+      rgb(64, 64, 64) 0%,
+      /* neutral-700 */ rgb(38, 38, 38) 40%,
+      /* neutral-800 */ rgb(23, 23, 23) 100% /* neutral-900 */
+    );
+  }
   .bg-soft-sunrise {
     background: linear-gradient(135deg, #ffebee 0%, #ef5350 40%, #c5003e 100%);
   }
@@ -218,3 +226,9 @@
 [data-radix-popper-content-wrapper] {
   z-index: 2000 !important; /* pastikan dropdown muncul di atas */
 }
+
+/* .highcharts-container,
+.highcharts-root {
+  width: 100% !important;
+  height: 100% !important;
+} */
