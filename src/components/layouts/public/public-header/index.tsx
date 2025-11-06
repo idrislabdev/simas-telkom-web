@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const PublicHeader = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -47,9 +47,12 @@ const PublicHeader = () => {
             <li className="text-neutral-600 hover:text-red-600">Unduh Data</li>
             <li className="text-neutral-600 hover:text-red-600">Kontak Kami</li>
           </ul>
-          <button className="rounded-2x text-sm bg-telkom-gradient border border-red-500 cursor-pointer text-white py-1 px-3 rounded-3xl">
+          <Link
+            to={`/login`}
+            className="rounded-2x text-sm bg-telkom-gradient border border-red-500 cursor-pointer text-white py-1 px-3 rounded-3xl"
+          >
             Login
-          </button>
+          </Link>
         </div>
       </div>
     </header>

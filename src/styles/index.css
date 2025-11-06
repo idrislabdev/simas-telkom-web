@@ -25,6 +25,8 @@
   --shadow-custom-6: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --shadow-custom-7: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  --shadow-custom-8: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   --breakpoint-s-1440: 90rem;
   --breakpoint-s-1600: 100rem;
   --breakpoint-s-1700: 106.25rem;
@@ -32,8 +34,27 @@
 }
 
 @layer utilities {
+  .bg-wave {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='0.25' d='M0,192L60,176C120,160,240,128,360,138.7C480,149,600,203,720,213.3C840,224,960,192,1080,181.3C1200,171,1320,181,1380,186.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+  }
+  .bg-sunrise-telkom {
+    background: radial-gradient(
+      circle at 30% 20%,
+      rgba(255, 255, 255, 0.4),
+      rgba(198, 0, 43, 1) 70%
+    );
+  }
   .bg-telkom-gradient {
     background: linear-gradient(135deg, #ff8a80 0%, #ff5252 40%, #d50000 100%);
+  }
+
+  .bg-soft-sunrise {
+    background: linear-gradient(135deg, #ffebee 0%, #ef5350 40%, #c5003e 100%);
+  }
+  .bg-soft-sunrise-2 {
+    background: linear-gradient(135deg, #fffafa 0%, #ffe5ec 40%, #ffd7e0 100%);
   }
 }
 

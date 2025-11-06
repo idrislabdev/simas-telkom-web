@@ -6,6 +6,7 @@ import HomePage from "@/features/public/home/page";
 import MasjidPage from "@/features/public/masjid/page";
 import { MasjidDetailPage } from "@/features/public/masjid/page/detail";
 import InfoPage from "@/features/public/info/page";
+import LoginPage from "@/features/public/login/pages";
 
 export default function PublicRoutes() {
   return (
@@ -17,6 +18,7 @@ export default function PublicRoutes() {
         <Route path="/info" element={<InfoPage />} />
         {/* <Route path="/info/:slug" element={<MasjidPage />} /> */}
       </Route>
+      <Route path="/login" element={<LoginPage />} />
     </Routes>
   );
 }
