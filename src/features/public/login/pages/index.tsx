@@ -30,12 +30,12 @@ const LoginPage = () => {
 
   return (
     <div
-      className="flex bg-neutral-800"
+      className="flex p-2 bg-soft-sunrise-2"
       style={{ height: "var(--app-height)" }}
     >
       {/* === KIRI === */}
       <div
-        className={`flex flex-col justify-center items-center h-full transition-[width] duration-700 ease-in-out w-1/2`}
+        className={`flex flex-col justify-center items-center h-full rounded-md transition-[width] duration-700 ease-in-out w-1/2 bg-neutral-800 z-10`}
       >
         <div className="flex flex-col gap-[42px] w-[350px] h-full justify-center py-20">
           <div className={`flex flex-col gap-[72px]`}>
@@ -100,7 +100,7 @@ const LoginPage = () => {
                 <button
                   onClick={onLogin}
                   disabled={loading}
-                  className="bg-telkom-gradient hover:bg-red-700 font-medium text-neutral-800 rounded-[10px] h-[50px] cursor-pointer w-full flex items-center justify-center"
+                  className="bg-red-600 hover:bg-red-700 font-medium text-white rounded-[10px] h-[50px] cursor-pointer w-full flex items-center justify-center"
                 >
                   {loading ? (
                     <>
@@ -119,11 +119,9 @@ const LoginPage = () => {
 
       {/* === KANAN === */}
       <div
-        className={`rounded-tl-[12px] rounded-bl-[12px] bg-neutral-800 h-full transition-[width] duration-700 ease-in-out w-1/2`}
+        className={`rounded-tl-[12px] rounded-bl-[12px] h-full transition-[width] duration-700 ease-in-out w-1/2`}
       >
-        <div
-          className={`relative overflow-hidden flex items-center h-full rounded-[12px]  bg-soft-sunrise-2`}
-        >
+        <div className={`relative overflow-hidden flex items-center h-full`}>
           <div
             className={`container mx-auto px-6 z-10 h-full w-[500px] justify-between flex flex-col py-20`}
           >
@@ -152,13 +150,12 @@ const LoginPage = () => {
               </li>
             </ul>
           </div>
-
-          {/* Wave Overlay */}
-          <div className="absolute inset-0 bg-wave opacity-60 pointer-events-none"></div>
-
-          {/* Radial Glow */}
-          <div className="absolute inset-0 bg-sunrise-telkom pointer-events-none mix-blend-overlay"></div>
         </div>
+        {/* Wave Overlay */}
+        <div className="absolute inset-0 bg-wave opacity-60 pointer-events-none"></div>
+
+        {/* Radial Glow */}
+        <div className="absolute inset-0 bg-sunrise-telkom pointer-events-none mix-blend-overlay"></div>
       </div>
     </div>
   );
