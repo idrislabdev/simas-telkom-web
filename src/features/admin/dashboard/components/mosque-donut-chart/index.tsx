@@ -70,6 +70,7 @@ export default function MosqueDonutChart() {
         data,
       },
     ],
+    credits: { enabled: false },
   };
 
   // 🔁 Reflow otomatis

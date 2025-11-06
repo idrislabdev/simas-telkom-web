@@ -1,4 +1,6 @@
 import BuildingColumnCharts from "@/features/admin/dashboard/components/building-column-chart";
+import FacilitiesTable from "@/features/admin/dashboard/components/facilities-table";
+import DashboardMap from "@/features/admin/dashboard/components/map";
 import MosqueDonutChart from "@/features/admin/dashboard/components/mosque-donut-chart";
 import MushollaDonutChart from "@/features/admin/dashboard/components/mushalla-donut-chart";
 import DashboardSummaryCard from "@/features/admin/dashboard/components/summary-cards";
@@ -20,6 +22,17 @@ const DashboardPage = () => {
           </div>
         </div>
       </div>
+      <div className="flex gap-4">
+        <div className="w-1/2 rounded-md shadow-custom-5">
+          <FacilitiesTable />
+        </div>
+        <div className="w-1/2 p-1 rounded-md shadow-custom-5">
+          <DashboardMap />
+        </div>
+      </div>
+      {/* <div className="flex flex-col p-2 shadow-custom-5 rounded-md h-[500px]">
+        <DashboardMap />
+      </div> */}
     </div>
   );
 };

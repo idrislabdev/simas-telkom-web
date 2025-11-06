@@ -29,7 +29,7 @@ export default function BuildingProgressChart() {
     },
     title: {
       text: "Data Masjid & Musholla Jatim, Bali Nusa Tenggara",
-      style: { color: "#f3f4f6", fontSize: "16px" },
+      style: { color: "#f3f4f6", fontSize: "14px" },
     },
     xAxis: {
       categories,
@@ -39,10 +39,11 @@ export default function BuildingProgressChart() {
       min: 0,
       title: { text: "Jumlah", style: { color: "#d1d5db" } },
       gridLineColor: "#374151",
+      gridLineWidth: 0,
       labels: { style: { color: "#9ca3af" } },
     },
     legend: {
-      itemStyle: { color: "#f3f4f6" },
+      itemStyle: { color: "#f3f4f6", fontSize: "11px" },
       itemHoverStyle: { color: "#ffffff" },
       align: "center",
       verticalAlign: "bottom",
@@ -112,6 +113,7 @@ export default function BuildingProgressChart() {
         pointPlacement: 0.15,
       },
     ],
+    credits: { enabled: false },
   };
 
   return (
