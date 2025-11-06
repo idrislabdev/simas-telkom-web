@@ -35,7 +35,7 @@ const LoginPage = () => {
     >
       {/* === KIRI === */}
       <div
-        className={`flex flex-col justify-center items-center h-full rounded-md transition-[width] duration-700 ease-in-out w-1/2 bg-neutral-800 z-10`}
+        className={`flex flex-col justify-center items-center h-full rounded-md transition-[width] duration-700 ease-in-out w-1/2 bg-neutral-900 z-10`}
       >
         <div className="flex flex-col gap-[42px] w-[350px] h-full justify-center py-20">
           <div className={`flex flex-col gap-[72px]`}>

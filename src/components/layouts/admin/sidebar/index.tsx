@@ -79,7 +79,7 @@ const AdminSidebar = () => {
   };
 
   return (
-    <div className="flex flex-col gap-7 h-full w-50 bg-neutral-800 rounded-md p-4 shadow-custom-1 sticky top-2">
+    <div className="flex flex-col gap-7 h-full w-50 bg-neutral-900 rounded-md p-4 shadow-custom-1 sticky top-2">
       {/* Logo */}
       <div>
         <img src="/images/logo-mttg-white.png" className="h-[50px]" />
