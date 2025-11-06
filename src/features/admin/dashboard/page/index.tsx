@@ -7,7 +7,7 @@ import DashboardSummaryCard from "@/features/admin/dashboard/components/summary-
 
 const DashboardPage = () => {
   return (
-    <div className="flex flex-col space-y-4">
+    <div className="flex flex-col space-y-4 pb-1">
       <DashboardSummaryCard />
       <div className="flex items-center gap-4 h-[500px]">
         <div className="w-2/3 shadow-custom-5 rounded-md h-full">

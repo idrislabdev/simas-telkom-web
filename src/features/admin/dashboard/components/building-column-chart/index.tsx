@@ -53,19 +53,24 @@ export default function BuildingProgressChart() {
       backgroundColor: "#1f2937",
       borderColor: "#374151",
       style: { color: "#f9fafb" },
-      formatter: function () {
-        const index = 0;
+      formatter: function (this: any) {
+        const index =
+          this.points && this.points.length > 0
+            ? this.points[0].point.index
+            : 0;
+
         const wilayah = categories[index];
         const mosque = regional3Data[index].completeness.mosque;
         const musholla = regional3Data[index].completeness.musholla;
 
         return `
-          <b>${wilayah}</b><br/>
-          🕌 Masjid: ${mosque} (total/lengkap)<br/>
-          🏠 Musholla: ${musholla} (total/lengkap)
-        `;
+      <b>${wilayah}</b><br/>
+      🕌 Masjid: ${mosque} (total/lengkap)<br/>
+      🏠 Musholla: ${musholla} (total/lengkap)
+    `;
       },
     },
+
     plotOptions: {
       column: {
         borderWidth: 0,
