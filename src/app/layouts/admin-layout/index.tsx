@@ -19,7 +19,7 @@ const AdminLayout = () => {
 
   return (
     <div
-      className="h-full w-full p-2 flex relative gap-3 bg-neutral-200"
+      className="h-full w-full p-2 flex relative gap-3 bg-neutral-50"
       style={{ height: "var(--app-height)" }}
     >
       <AdminSidebar />
