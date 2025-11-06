@@ -6,7 +6,7 @@ const DashboardSummaryCard = () => {
     <div className="flex items-center gap-2">
       {regional3Data.slice(0, 3).map((item, index: number) => (
         <div
-          className="flex flex-col gap-3 w-1/4 rounded-md shadow-custom-5 p-4"
+          className="flex flex-col gap-3 w-1/4 rounded-md bg-white shadow-custom-5 p-4"
           key={index}
         >
           <div className="flex items-center gap-2">
@@ -38,7 +38,7 @@ const DashboardSummaryCard = () => {
           </div>
         </div>
       ))}
-      <div className="flex flex-col gap-3 w-1/4 rounded-md shadow-custom-5 p-4 bg-neutral-gradient">
+      <div className="flex flex-col gap-3 w-1/4 rounded-md bg-white shadow-custom-5 p-4 bg-neutral-gradient">
         <div className="flex items-center gap-2">
           <span className="h-10 w-10 bg-white rounded-md flex flex-col justify-center items-center text-neutral-900">
             <Building2 size={24} />
